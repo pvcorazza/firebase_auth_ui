@@ -27,4 +27,8 @@ abstract class AuthProvider {
   factory AuthProvider.phone() {
     return PhoneProvider();
   }
+
+  factory AuthProvider.apple() {
+    return AppleProvider();
+  }
 }

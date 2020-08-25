@@ -100,6 +100,7 @@ class _MyAppState extends State<MyApp> {
       // User is null, initiate auth
       FirebaseAuthUi.instance().launchAuth([
         AuthProvider.email(),
+        AuthProvider.apple(),
         // Google ,facebook, twitter and phone auth providers are commented because this example
         // isn't configured to enable them. Please follow the README and uncomment
         // them if you want to integrate them in your project.
