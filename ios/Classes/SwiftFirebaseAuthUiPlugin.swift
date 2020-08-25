@@ -150,7 +150,9 @@ public class SwiftFirebaseAuthUiPlugin: NSObject, FlutterPlugin, FUIAuthDelegate
                     } else if (provider == "phone") {
                         authProviders.append(FUIPhoneAuth(authUI: authUI!))
                     } else if (provider == "apple") {
-                        authProviders.append(FUIOAuth.appleAuthProvider())
+                        if #available(iOS 13.0, *) {
+                            authProviders.append(FUIOAuth.appleAuthProvider())
+                        } 
                     }
                 }
             }
